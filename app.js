@@ -58,6 +58,8 @@ app.use(express.json());
 // Setting up bodyparser
 app.use(bodyParser.urlencoded({ extended: false }))
 
+app.use(express.static("public"))
+
 // users' routes
 app.use('/login', require('./routes/auth/login'));
 app.use('/signup', require('./routes/auth/signup'));
