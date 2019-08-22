@@ -61,11 +61,11 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static("public"))
 
 // users' routes
-app.use('/login', require('./routes/auth/login'));
-app.use('/signup', require('./routes/auth/signup'));
-app.use('/logout', require('./routes/auth/logout'));
-app.use("/index", require("./routes/exhibition/index"))
-app.use("/exhibition", protect, require("./routes/exhibition/exhibition"));
+app.use('/api/login', require('./routes/auth/login'));
+app.use('/api/signup', require('./routes/auth/signup'));
+app.use('/api/logout', require('./routes/auth/logout'));
+app.use("/api/index", require("./routes/exhibition/index"))
+app.use("/api/exhibition", protect, require("./routes/exhibition/exhibition"));
 
 // Establish connection
 app.listen(process.env.PORT, () => console.log("My Exhibition project is running"));
