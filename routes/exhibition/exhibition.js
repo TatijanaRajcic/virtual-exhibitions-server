@@ -142,6 +142,7 @@ router.put('/finalize', function(req,res,next){
     })
 }) 
 
+
 // 7) SHOW PAGE OF EXHIBITION
 
 router.get('/show/:id', function(req,res,next){
@@ -155,6 +156,22 @@ router.get('/show/:id', function(req,res,next){
       res.send(err)
     })
 }) 
+
+
+// 8) DELETE EXHIBITION ON PROFILE PAGE
+
+router.get("/delete-exhibition/:id", function(req,res) {
+  debugger
+  let exhibitionId = req.params.id;
+  Exhibitions.findByIdAndRemove(exhibitionId)
+    .then(()=>{
+      debugger
+      res.send("Exhibition deleted")
+    })
+    .catch((err)=>{
+      res.send(err)
+    })
+})
 
 
 // 8) ADD TO FAVORITE
