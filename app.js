@@ -80,11 +80,11 @@ app.use(function (err, req, res, next) {
   }
 })
 
-// // Setting up for deployment
-// app.use((req, res, next) => {
-//   // If no routes match, send them the React HTML.
-//   res.sendFile(__dirname + "/public/index.html");
-// });
+// Setting up for deployment
+app.use((req, res, next) => {
+  // If no routes match, send them the React HTML.
+  res.sendFile(__dirname + "/public/index.html");
+});
 
 // Exporting the app
 module.exports = app;
