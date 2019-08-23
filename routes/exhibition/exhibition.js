@@ -219,6 +219,7 @@ router.get('/own-favorites', function(req,res,next){
       debugger
       Exhibitions.find({'_id': { $in: favorites }})
         .populate("creator")
+        .populate("images")
         .then((favorites)=>{
           debugger
           res.status(200).json(favorites)
