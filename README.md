@@ -1,4 +1,6 @@
-# third-project-server
+# third Ironhack's project (server): https://virtual-exhibitions.herokuapp.com/
+
+Client side: https://github.com/TatijanaRajcic/third-project-client
 
 TO DO : 
 
